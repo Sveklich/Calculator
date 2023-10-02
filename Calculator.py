@@ -1,20 +1,29 @@
 import math
 
 operator = input("Введите оператор (+, -, *, /, **, sqrt, !, sin, cos, tg): ")
-if operator == "sqrt" or operator == "!" or operator == "sin" or operator == "cos" or operator == "tg":
+if operator == "sqrt" or operator == "sin" or operator == "cos" or operator == "tg":
     try:
         num1 = float(input("Введите число: "))
     except:
         print("Ошибка: Введённое значение не является числом!")
+        exit()
+elif operator == "!":
+    try:
+        num1 = int(input("Введите число: "))
+    except:
+        print("Ошибка: Введённое значение не является числом!")
+        exit()
 else:
     try:
         num1 = float(input("Введите первое число: "))
     except:
         print("Ошибка: Введённое значение не является числом!")
+        exit()
     try:
         num2 = float(input("Введите второе число: "))
     except:
         print("Ошибка: Введённое значение не является числом!")
+        exit()
 
 if operator == "+":
     result = num1 + num2
